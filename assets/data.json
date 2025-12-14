@@ -1,0 +1,70 @@
+{
+  "profile": {
+    "name": "Hariprasad Bathini Sankaran",
+    "role": "Data Engineer",
+    "location": "Cincinnati, Ohio",
+    "contact": {
+      "phone": "+1 (513) 227-1668",
+      "email": "hariprasad.sankaran@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/hariprasadbs",
+      "github": "https://github.com/Hariprasad-b-s"
+    }
+  },
+  "summary": "Result driven Data Engineer with 4 years of experience designing and optimizing large scale data architectures, pipelines, and analytical frameworks across Databricks, Snowflake, dbt, and Apache Airflow. Skilled in developing high-performance ETL/ELT workflows, implementing medallion data models, and automating data ingestion using Python, PySpark, and SQL across AWS and Azure environments. Proficient in building streaming and batch data solutions, optimizing pipeline scalability, cost efficiency, and reliability.",
+  "skills": {
+    "Data Engineering": [
+      "Databricks", "Python", "Spark", "PySpark", "SQL", "JSON", 
+      "Database", "Data Warehouse", "Pandas", "Structured Streaming", 
+      "ETL/ELT", "Data Modelling", "Autoloader", "Medallion Architecture", 
+      "Unity Catalog", "Cribl", "Spark SQL", "Data Governance", "Data Quality",
+      "Databricks Workflows", "Apache Airflow", "DBT Cloud", "Kafka (Basics)"
+    ],
+    "Cloud & DevOps": [
+      "AWS (Lambda, S3)", 
+      "Azure (SQL Server, ADLS Gen2)", 
+      "Git", "GitHub", 
+      "Terraform", "CI/CD", "Agile"
+    ],
+    "Programming": [
+      "Python", "C++", "Java", "SQL", "REST API"
+    ],
+    "Tools": [
+      "VS Code", "Cursor", "AI Agents", "Genie AI", "Unix Commands"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Data Engineer 2 - Cyber Security",
+      "company": "Comcast Corporation",
+      "location": "Chennai, India",
+      "period": "Aug 2023 – Aug 2025",
+      "highlights": [
+        "Architected and maintained large scale data pipelines in Databricks to process multi-terabyte cybersecurity telemetry.",
+        "Delivered end-to-end automated data workflows by orchestrating Databricks Workflows with Terraform.",
+        "Engineered a robust medallion (Bronze–Silver–Gold) data architecture to ensure clean, structured data.",
+        "Implemented real-time structured streaming pipelines using Databricks Structured Streaming, Spark Streaming, and Kafka.",
+        "Automated multi-source data ingestion using Cribl, Apache Airflow, and AWS Lambda.",
+        "Designed a reusable framework that reduced development effort for new data onboarding by 40%.",
+        "Optimized Databricks cloud infrastructure costs by $20,000 annually through automated maintenance scripts.",
+        "Implemented Terraform modules for Databricks CI/CD, automating deployment across environments."
+      ]
+    },
+    {
+      "role": "Data Engineer",
+      "company": "Infosys Ltd. (Microsoft Corporation Ltd.)",
+      "location": "Chennai, India",
+      "period": "Jun 2021 – Aug 2023",
+      "highlights": [
+        "Engineered and maintained large-scale ETL pipelines in Azure Databricks and Azure Data Factory (ADF).",
+        "Leveraged Apache PySpark to design high-performance distributed data processing jobs.",
+        "Converted legacy SQL/T-SQL stored procedures into modular PySpark ETL frameworks, improving performance by 15%.",
+        "Developed a metadata-driven ingestion framework in Azure Data Factory.",
+        "Implemented data lifecycle management for Delta tables using Python multiprocessing.",
+        "Designed dimensional data models (Facts and Dimensions) supporting self-service analytics.",
+        "Developed a reusable REST API ingestion notebook in Python to automate external data onboarding."
+      ]
+    }
+  ],
+  "projects": [],
+  "education": []
+}

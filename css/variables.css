@@ -1,0 +1,45 @@
+:root {
+    /* Fonts */
+    --font-heading: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Light Theme (Data Viz / Clean) */
+    --bg-color-light: #f8f9fa;
+    --text-color-light: #1a1a1a;
+    --accent-primary-light: #0066cc; /* Deep Blue */
+    --accent-secondary-light: #00cc99; /* Teal */
+    --card-bg-light: rgba(255, 255, 255, 0.8);
+    --border-color-light: #e0e0e0;
+    --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    /* Dark Theme (Cyberpunk / Terminal) */
+    --bg-color-dark: #0a0a0f;
+    --text-color-dark: #e0e0e0;
+    --accent-primary-dark: #00ff9d; /* Neon Green */
+    --accent-secondary-dark: #00b8ff; /* Neon Blue */
+    --card-bg-dark: rgba(20, 20, 30, 0.7);
+    --border-color-dark: #333333;
+    --shadow-dark: 0 4px 20px rgba(0, 255, 157, 0.1);
+
+    /* Defaults (Will be swapped by JS) */
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --accent-primary: var(--accent-primary-dark);
+    --accent-secondary: var(--accent-secondary-dark);
+    --card-bg: var(--card-bg-dark);
+    --border-color: var(--border-color-dark);
+    --shadow: var(--shadow-dark);
+    
+    --nav-height: 70px;
+    --transition-speed: 0.3s;
+}
+
+[data-theme="light"] {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --accent-primary: var(--accent-primary-light);
+    --accent-secondary: var(--accent-secondary-light);
+    --card-bg: var(--card-bg-light);
+    --border-color: var(--border-color-light);
+    --shadow: var(--shadow-light);
+}
