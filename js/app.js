@@ -128,7 +128,11 @@ function renderContact(profile) {
     links.forEach(link => {
         const div = document.createElement('div');
         div.innerHTML = `
-            <h3><i class="${link.prefix} ${link.icon}"></i> ${link.label}</h3>
+            <h3>
+                <a href="${link.href}" target="_blank" style="text-decoration:none; color:inherit;">
+                    <i class="${link.prefix} ${link.icon}"></i> ${link.label}
+                </a>
+            </h3>
             <a href="${link.href}" target="_blank">${link.value}</a>
         `;
         container.appendChild(div);
