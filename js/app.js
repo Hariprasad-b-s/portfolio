@@ -11,6 +11,7 @@ async function fetchData() {
         renderAbout(data.summary, data.profile);
         renderSkills(data.skills);
         renderExperience(data.experience);
+        renderEducation(data.education);
         renderContact(data.profile);
     } catch (error) {
         console.error('Error loading data:', error);
@@ -160,3 +161,28 @@ window.addEventListener('click', (e) => {
         closeResumeModal();
     }
 });
+
+function renderEducation(education) {
+    const container = document.getElementById('education-container');
+    
+    education.forEach(edu => {
+        const item = document.createElement('div');
+        item.className = 'timeline-item';
+        
+        item.innerHTML = `
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <span class="role">${edu.degree}</span>
+                        <span class="company">@ ${edu.institution}</span>
+                    </div>
+                    <div>
+                        <span class="date">${edu.period}</span>
+                    </div>
+                </div>
+                <span class="location"><i class="fas fa-map-marker-alt"></i> ${edu.location}</span>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
