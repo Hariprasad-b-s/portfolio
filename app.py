@@ -61,20 +61,14 @@ def save_contact():
         print(f"Error saving contact: {e}")
         return jsonify({"error": "Internal Server Error"}), 500
 
-@app.route('/api/admin/messages', methods=['GET'])
-def view_messages():
-    # Simple helper route to view messages (In prod, protect this!)
-    try:
-        conn = sqlite3.connect(DB_NAME)
-        cursor = conn.cursor()
-        cursor.execute('SELECT * FROM contacts ORDER BY timestamp DESC')
-        rows = cursor.fetchall()
-        conn.close()
-        return jsonify(rows)
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        print(f"Error saving contact: {e}")
+        return jsonify({"error": "Internal Server Error"}), 500
 
 if __name__ == '__main__':
     print("Starting Flask Portfolio Server...")
     print(f"Database: {os.path.abspath(DB_NAME)}")
-    app.run(host='0.0.0.0', port=5500, debug=True)
+    # Use environment variables for production configuration
+    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=debug_mode)
