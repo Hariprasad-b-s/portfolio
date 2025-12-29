@@ -120,7 +120,7 @@ function renderContact(profile) {
     const { contact } = profile;
 
     const links = [
-        { prefix: 'fas', icon: 'fa-envelope', label: 'Email', value: contact.email, href: `mailto:${contact.email}` },
+        { icon: 'fa-envelope', label: 'Email', value: profile.contact.email, href: `mailto:${profile.contact.email}`, prefix: 'fas' },
         { prefix: 'fab', icon: 'fa-linkedin', label: 'LinkedIn', value: 'hariprasadbs', href: contact.linkedin },
         { prefix: 'fab', icon: 'fa-github', label: 'GitHub', value: 'Hariprasad-b-s', href: contact.github },
         { prefix: 'fas', icon: 'fa-phone', label: 'Phone', value: contact.phone, href: `tel:${contact.phone}` }
@@ -164,11 +164,11 @@ window.addEventListener('click', (e) => {
 
 function renderEducation(education) {
     const container = document.getElementById('education-container');
-    
+
     education.forEach(edu => {
         const item = document.createElement('div');
         item.className = 'timeline-item';
-        
+
         item.innerHTML = `
             <div class="job-card">
                 <div class="job-header">
@@ -186,3 +186,44 @@ function renderEducation(education) {
         container.appendChild(item);
     });
 }
+
+/* AJAX Form Submission */
+const form = document.getElementById('contact-form');
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    const status = document.getElementById('form-status');
+    const data = new FormData(event.target);
+
+    // Send to local Flask Backend
+    fetch('/api/contact', {
+        method: 'POST',
+        body: data
+        // No headers needed for FormData; fetch sets boundary automatically
+    }).then(response => {
+        if (response.ok) {
+            status.innerHTML = "Transmission Success! Data packet stored in secure DB.";
+            status.className = "success";
+            form.reset();
+        } else {
+            response.json().then(data => {
+                status.innerHTML = data.error || "Transmission Failed. Check server logs.";
+                status.className = "error";
+            }).catch(() => {
+                status.innerHTML = "Server Error. Is Flask running?";
+                status.className = "error";
+            });
+        }
+    }).catch(error => {
+        status.innerHTML = "Connection Error. Is the Flask backend running?";
+        status.className = "error";
+    });
+
+    // Clear status after 5 seconds
+    setTimeout(() => {
+        status.innerHTML = "";
+        status.className = "";
+    }, 5000);
+}
+
+form.addEventListener("submit", handleSubmit);
