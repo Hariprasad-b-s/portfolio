@@ -1,3 +1,28 @@
+/* Firebase Configuration & Initialization */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+// TODO: User must replace this with their actual project config
+const firebaseConfig = {
+    apiKey: "AIzaSyAYzCgeD6R2jPku9I-0L4eXdAPPrpMWJAs",
+    authDomain: "portfolio-hariprasad.firebaseapp.com",
+    projectId: "portfolio-hariprasad",
+    storageBucket: "portfolio-hariprasad.firebasestorage.app",
+    messagingSenderId: "808922330158",
+    appId: "1:808922330158:web:9109ccb0e8e72bb9f7dbbf",
+    measurementId: "G-LPJCR31XRZ"
+};
+
+// Initialize Firebase
+let db;
+try {
+    const app = initializeApp(firebaseConfig);
+    db = getFirestore(app);
+    console.log("Firebase initialized");
+} catch (error) {
+    console.warn("Firebase config missing or invalid. Update js/app.js");
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 });
@@ -141,14 +166,14 @@ function renderContact(profile) {
 }
 
 /* Resume Modal Logic */
-function openResumeModal(e) {
+window.openResumeModal = function (e) {
     if (e) e.preventDefault();
     const modal = document.getElementById('resume-modal');
     modal.classList.add('show');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
 }
 
-function closeResumeModal() {
+window.closeResumeModal = function () {
     const modal = document.getElementById('resume-modal');
     modal.classList.remove('show');
     document.body.style.overflow = ''; // Restore scrolling
@@ -193,31 +218,35 @@ const form = document.getElementById('contact-form');
 async function handleSubmit(event) {
     event.preventDefault();
     const status = document.getElementById('form-status');
-    const data = new FormData(event.target);
 
-    // Send to local Flask Backend
-    fetch('/api/contact', {
-        method: 'POST',
-        body: data
-        // No headers needed for FormData; fetch sets boundary automatically
-    }).then(response => {
-        if (response.ok) {
-            status.innerHTML = "Transmission Success! Data packet stored in secure DB.";
-            status.className = "success";
-            form.reset();
-        } else {
-            response.json().then(data => {
-                status.innerHTML = data.error || "Transmission Failed. Check server logs.";
-                status.className = "error";
-            }).catch(() => {
-                status.innerHTML = "Server Error. Is Flask running?";
-                status.className = "error";
-            });
-        }
-    }).catch(error => {
-        status.innerHTML = "Connection Error. Is the Flask backend running?";
+    // Check if config is still placeholder
+    if (firebaseConfig.apiKey === "YOUR_API_KEY") {
+        status.innerHTML = "Error: Firebase Config not set in js/app.js";
         status.className = "error";
-    });
+        return;
+    }
+
+    status.innerHTML = "Transmitting to Cloud Firestore...";
+    status.className = ""; // Reset class
+
+    const formData = new FormData(event.target);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+        timestamp: serverTimestamp()
+    };
+
+    try {
+        await addDoc(collection(db, "contacts"), data);
+        status.innerHTML = "Transmission Success! Stored in Cloud Firestore.";
+        status.className = "success";
+        form.reset();
+    } catch (error) {
+        console.error("Error adding document: ", error);
+        status.innerHTML = "Transmission Failed: " + error.message;
+        status.className = "error";
+    }
 
     // Clear status after 5 seconds
     setTimeout(() => {
