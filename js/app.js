@@ -55,7 +55,7 @@ function renderHero(profile, experience) {
 
     const statsConfig = [
         { label: 'Years Exp', value: `${expYears}+` },
-        { label: 'Projects', value: '10+' }, // Estimating based on detailed resume bullets
+        { label: 'Projects', value: '5+' }, // Estimating based on detailed resume bullets
         { label: 'Tech Stack', value: '15+' }
     ];
 
