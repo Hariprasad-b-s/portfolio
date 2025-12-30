@@ -1,6 +1,7 @@
 /* Firebase Configuration & Initialization */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
 
 // TODO: User must replace this with their actual project config
 const firebaseConfig = {
@@ -15,17 +16,51 @@ const firebaseConfig = {
 
 // Initialize Firebase
 let db;
+let analytics;
 try {
     const app = initializeApp(firebaseConfig);
     db = getFirestore(app);
-    console.log("Firebase initialized");
+    analytics = getAnalytics(app);
+    console.log("Firebase & Analytics initialized");
 } catch (error) {
     console.warn("Firebase config missing or invalid. Update js/app.js");
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData();
+    setupMobileMenu();
 });
+
+function setupMobileMenu() {
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Toggle icon between bars and times (X)
+            const icon = mobileBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    }
+}
 
 async function fetchData() {
     try {
@@ -171,6 +206,12 @@ window.openResumeModal = function (e) {
     const modal = document.getElementById('resume-modal');
     modal.classList.add('show');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
+
+    // Track Resume View
+    if (analytics) {
+        logEvent(analytics, 'view_resume');
+        console.log('Analytics: Resume view logged');
+    }
 }
 
 window.closeResumeModal = function () {
@@ -242,10 +283,20 @@ async function handleSubmit(event) {
         status.innerHTML = "Transmission Success! Stored in Cloud Firestore.";
         status.className = "success";
         form.reset();
+
+        // Track Form Submit
+        if (analytics) {
+            logEvent(analytics, 'contact_form_success');
+            console.log('Analytics: Contact form success logged');
+        }
     } catch (error) {
         console.error("Error adding document: ", error);
         status.innerHTML = "Transmission Failed: " + error.message;
         status.className = "error";
+
+        if (analytics) {
+            logEvent(analytics, 'contact_form_error', { error: error.message });
+        }
     }
 
     // Clear status after 5 seconds
