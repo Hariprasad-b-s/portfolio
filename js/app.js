@@ -64,7 +64,7 @@ function setupMobileMenu() {
 
 async function fetchData() {
     try {
-        const response = await fetch('assets/data.json');
+        const response = await fetch('assets/data.json')["FTE"];
         const data = await response.json();
 
         renderHero(data.profile, data.experience);
