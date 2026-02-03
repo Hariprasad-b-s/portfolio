@@ -1,151 +1,145 @@
 {
-  "FTE": {
-    "profile": {
-      "name": "Hariprasad Bathini Sankaran",
-      "role": "Data Engineer",
-      "location": "Cincinnati, Ohio",
-      "contact": {
-        "phone": "+1 (513) 227-1668",
-        "email": "hariprasad.sankaran@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/hariprasadbs",
-        "github": "https://github.com/Hariprasad-b-s"
-      }
-    },
-    "summary": "Result driven Data Engineer with 4 years of experience designing and optimizing large scale data architectures, pipelines, and analytical frameworks across Databricks, Snowflake, dbt, and Apache Airflow. Skilled in developing high-performance ETL/ELT workflows, implementing medallion data models, and automating data ingestion using Python, PySpark, and SQL across AWS and Azure environments. Proficient in building streaming and batch data solutions, optimizing pipeline scalability, cost efficiency, and reliability.",
-    "skills": {
-      "Data Engineering": [
-        "Databricks",
-        "Python",
-        "Spark",
-        "PySpark",
-        "SQL",
-        "JSON",
-        "Database",
-        "Data Warehouse",
-        "Pandas",
-        "Structured Streaming",
-        "ETL/ELT",
-        "Data Modelling",
-        "Autoloader",
-        "Medallion Architecture",
-        "Unity Catalog",
-        "Cribl",
-        "Spark SQL",
-        "Data Governance",
-        "Data Quality",
-        "Databricks Workflows",
-        "Apache Airflow",
-        "DBT Cloud",
-        "Kafka (Basics)"
-      ],
-      "Cloud & DevOps": [
-        "AWS (Lambda, S3)",
-        "Azure (SQL Server, ADLS Gen2)",
-        "Git",
-        "GitHub",
-        "Terraform",
-        "CI/CD",
-        "Agile"
-      ],
-      "Programming": [
-        "Python",
-        "C++",
-        "Java",
-        "SQL",
-        "REST API"
-      ],
-      "Tools": [
-        "VS Code",
-        "Cursor",
-        "AI Agents",
-        "Genie AI",
-        "Unix Commands"
-      ]
-    },
-    "experience": [
-      {
-        "role": "Data Engineer 2 - Cyber Security",
-        "company": "Comcast Corporation",
-        "location": "Chennai, India",
-        "period": "Aug 2023 – Aug 2025",
-        "highlights": [
-          "Architected and maintained large scale data pipelines in Databricks to process multi-terabyte cybersecurity telemetry.",
-          "Delivered end-to-end automated data workflows by orchestrating Databricks Workflows with Terraform.",
-          "Engineered a robust medallion (Bronze–Silver–Gold) data architecture to ensure clean, structured data.",
-          "Implemented real-time structured streaming pipelines using Databricks Structured Streaming, Spark Streaming, and Kafka.",
-          "Automated multi-source data ingestion using Cribl, Apache Airflow, and AWS Lambda.",
-          "Designed a reusable framework that reduced development effort for new data onboarding by 40%.",
-          "Optimized Databricks cloud infrastructure costs by $20,000 annually through automated maintenance scripts.",
-          "Implemented Terraform modules for Databricks CI/CD, automating deployment across environments."
-        ]
-      },
-      {
-        "role": "Data Engineer",
-        "company": "Infosys Ltd.",
-        "location": "Chennai, India",
-        "period": "Jun 2021 – Aug 2023",
-        "highlights": [
-          "Engineered and maintained large-scale ETL pipelines in Azure Databricks and Azure Data Factory (ADF).",
-          "Leveraged Apache PySpark to design high-performance distributed data processing jobs.",
-          "Converted legacy SQL/T-SQL stored procedures into modular PySpark ETL frameworks, improving performance by 15%.",
-          "Developed a metadata-driven ingestion framework in Azure Data Factory.",
-          "Implemented data lifecycle management for Delta tables using Python multiprocessing.",
-          "Designed dimensional data models (Facts and Dimensions) supporting self-service analytics.",
-          "Developed a reusable REST API ingestion notebook in Python to automate external data onboarding."
-        ]
-      },
-      {
-        "role": "Data Trainee",
-        "company": "Zoho Corporation",
-        "location": "Chennai, India",
-        "period": "Jan 2020 – Dec 2020",
-        "highlights": [
-          "Assisted in building and maintaining SQL-driven data pipelines for internal reporting and analytics platforms, supporting the automation of key business metrics and dashboards used by product and marketing teams.",
-          "Authored and optimized complex SQL queries to generate, validate, and troubleshoot business intelligence reports, improving report accuracy and reducing turnaround time for data requests.",
-          "Developed Python scripts for data cleaning, preprocessing, and file automation, streamlining report generation and minimizing manual intervention in recurring data workflows.",
-          "Collaborated with cross-functional teams to understand data requirements and translate them into structured data extraction and transformation processes within Zoho’s internal systems.",
-          "Gained foundational exposure to data modeling, version control, and ETL best practices, setting the groundwork for large-scale data engineering work in later roles at Infosys and Comcast."
-        ]
-      }
+  "profile": {
+    "name": "Hariprasad Bathini Sankaran",
+    "role": "Data Engineer",
+    "location": "Cincinnati, Ohio",
+    "contact": {
+      "phone": "+1 (513) 227-1668",
+      "email": "hariprasad.sankaran@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/hariprasadbs",
+      "github": "https://github.com/Hariprasad-b-s"
+    }
+  },
+  "summary": "Result driven Data Engineer with 4 years of experience designing and optimizing large scale data architectures, pipelines, and analytical frameworks across Databricks, Snowflake, dbt, and Apache Airflow. Skilled in developing high-performance ETL/ELT workflows, implementing medallion data models, and automating data ingestion using Python, PySpark, and SQL across AWS and Azure environments. Proficient in building streaming and batch data solutions, optimizing pipeline scalability, cost efficiency, and reliability.",
+  "skills": {
+    "Data Engineering": [
+      "Databricks",
+      "Python",
+      "Spark",
+      "PySpark",
+      "SQL",
+      "JSON",
+      "Database",
+      "Data Warehouse",
+      "Pandas",
+      "Structured Streaming",
+      "ETL/ELT",
+      "Data Modelling",
+      "Autoloader",
+      "Medallion Architecture",
+      "Unity Catalog",
+      "Cribl",
+      "Spark SQL",
+      "Data Governance",
+      "Data Quality",
+      "Databricks Workflows",
+      "Apache Airflow",
+      "DBT Cloud",
+      "Kafka (Basics)"
     ],
-    "projects": [
-      {
-        "title": "Security Log Analytics and Threat Detection Platform (Azure)",
-        "highlights": [
-          "Built large-scale data pipelines using Azure Data Factory and Databricks to collect and process security telemetry from simulated sources.",
-          "Implemented transformation workflows using PySpark and stored curated datasets in ADLS Gen2 using Parquet and Delta formats.",
-          "Designed Bronze–Silver–Gold medallion architecture to support real-time analytics and historical reporting use cases.",
-          "Implemented data validation checks and alerting logic to evaluate pipeline reliability and data quality in a production-like environment.",
-          "Designed operational-style dashboards to monitor ingestion latency, throughput, and system health for proactive troubleshooting."
-        ]
-      },
-      {
-        "title": "Retail Analytics Platform (AWS)",
-        "highlights": [
-          "Designed and implemented an automated ETL pipeline using AWS S3, Glue, Lambda, and Redshift to process 50K+ retail events/hour.",
-          "Built data ingestion and transformation workflows using Python and PySpark, handling structured and semi-structured datasets at scale.",
-          "Optimized SQL queries and partition strategies, reducing dashboard refresh latency and improving query performance by 30%.",
-          "Developed interactive dashboards in Power BI to track inventory trends, improving demand forecasting accuracy by 25%"
-        ]
-      }
+    "Cloud & DevOps": [
+      "AWS (Lambda, S3)",
+      "Azure (SQL Server, ADLS Gen2)",
+      "Git",
+      "GitHub",
+      "Terraform",
+      "CI/CD",
+      "Agile"
     ],
-    "education": [
-      {
-        "institution": "University of Cincinnati",
-        "period": "Aug 2025 - Dec 2026",
-        "degree": "Master of Science in Information Technology",
-        "location": "Cincinnati, Ohio, USA"
-      },
-      {
-        "institution": "Anna University",
-        "period": "Jun 2016 - Nov 2020",
-        "degree": "Bachelor of Engineering in Electronics and Communication Engineering",
-        "location": "TamilNadu, India"
-      }
+    "Programming": [
+      "Python",
+      "C++",
+      "Java",
+      "SQL",
+      "REST API"
+    ],
+    "Tools": [
+      "VS Code",
+      "Cursor",
+      "AI Agents",
+      "Genie AI",
+      "Unix Commands"
     ]
   },
-  "Intern": {
-    "summary": "Master’s student in Information Technology with hands-on experience in data engineering. Experienced in building scalable data pipelines using Python, SQL, Spark, Databricks, AWS, and Azure. Seeking a Data Engineering Internship for Summer 2026 to apply industry experience in a research-driven and production environment."
-  },
-  "experience": []
+  "experience": [
+    {
+      "role": "Data Engineer 2 - Cyber Security",
+      "company": "Comcast Corporation",
+      "location": "Chennai, India",
+      "period": "Aug 2023 – Aug 2025",
+      "highlights": [
+        "Architected and maintained large scale data pipelines in Databricks to process multi-terabyte cybersecurity telemetry.",
+        "Delivered end-to-end automated data workflows by orchestrating Databricks Workflows with Terraform.",
+        "Engineered a robust medallion (Bronze–Silver–Gold) data architecture to ensure clean, structured data.",
+        "Implemented real-time structured streaming pipelines using Databricks Structured Streaming, Spark Streaming, and Kafka.",
+        "Automated multi-source data ingestion using Cribl, Apache Airflow, and AWS Lambda.",
+        "Designed a reusable framework that reduced development effort for new data onboarding by 40%.",
+        "Optimized Databricks cloud infrastructure costs by $20,000 annually through automated maintenance scripts.",
+        "Implemented Terraform modules for Databricks CI/CD, automating deployment across environments."
+      ]
+    },
+    {
+      "role": "Data Engineer",
+      "company": "Infosys Ltd.",
+      "location": "Chennai, India",
+      "period": "Jun 2021 – Aug 2023",
+      "highlights": [
+        "Engineered and maintained large-scale ETL pipelines in Azure Databricks and Azure Data Factory (ADF).",
+        "Leveraged Apache PySpark to design high-performance distributed data processing jobs.",
+        "Converted legacy SQL/T-SQL stored procedures into modular PySpark ETL frameworks, improving performance by 15%.",
+        "Developed a metadata-driven ingestion framework in Azure Data Factory.",
+        "Implemented data lifecycle management for Delta tables using Python multiprocessing.",
+        "Designed dimensional data models (Facts and Dimensions) supporting self-service analytics.",
+        "Developed a reusable REST API ingestion notebook in Python to automate external data onboarding."
+      ]
+    },
+    {
+      "role": "Data Trainee",
+      "company": "Zoho Corporation",
+      "location": "Chennai, India",
+      "period": "Jan 2020 – Dec 2020",
+      "highlights": [
+        "Assisted in building and maintaining SQL-driven data pipelines for internal reporting and analytics platforms, supporting the automation of key business metrics and dashboards used by product and marketing teams.",
+        "Authored and optimized complex SQL queries to generate, validate, and troubleshoot business intelligence reports, improving report accuracy and reducing turnaround time for data requests.",
+        "Developed Python scripts for data cleaning, preprocessing, and file automation, streamlining report generation and minimizing manual intervention in recurring data workflows.",
+        "Collaborated with cross-functional teams to understand data requirements and translate them into structured data extraction and transformation processes within Zoho’s internal systems.",
+        "Gained foundational exposure to data modeling, version control, and ETL best practices, setting the groundwork for large-scale data engineering work in later roles at Infosys and Comcast."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Security Log Analytics and Threat Detection Platform (Azure)",
+      "highlights": [
+        "Built large-scale data pipelines using Azure Data Factory and Databricks to collect and process security telemetry from simulated sources.",
+        "Implemented transformation workflows using PySpark and stored curated datasets in ADLS Gen2 using Parquet and Delta formats.",
+        "Designed Bronze–Silver–Gold medallion architecture to support real-time analytics and historical reporting use cases.",
+        "Implemented data validation checks and alerting logic to evaluate pipeline reliability and data quality in a production-like environment.",
+        "Designed operational-style dashboards to monitor ingestion latency, throughput, and system health for proactive troubleshooting."
+      ]
+    },
+    {
+      "title": "Retail Analytics Platform (AWS)",
+      "highlights": [
+        "Designed and implemented an automated ETL pipeline using AWS S3, Glue, Lambda, and Redshift to process 50K+ retail events/hour.",
+        "Built data ingestion and transformation workflows using Python and PySpark, handling structured and semi-structured datasets at scale.",
+        "Optimized SQL queries and partition strategies, reducing dashboard refresh latency and improving query performance by 30%.",
+        "Developed interactive dashboards in Power BI to track inventory trends, improving demand forecasting accuracy by 25%"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Cincinnati",
+      "period": "Aug 2025 - Dec 2026",
+      "degree": "Master of Science in Information Technology",
+      "location": "Cincinnati, Ohio, USA"
+    },
+    {
+      "institution": "Anna University",
+      "period": "Jun 2016 - Nov 2020",
+      "degree": "Bachelor of Engineering in Electronics and Communication Engineering",
+      "location": "TamilNadu, India"
+    }
+  ]
 }
