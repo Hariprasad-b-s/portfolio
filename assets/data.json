@@ -110,6 +110,8 @@
   "projects": [
     {
       "title": "Security Log Analytics and Threat Detection Platform (Azure)",
+      "status": "Completed",
+      "url": "https://github.com/Hariprasad-b-s/Security-Log-Analytics-and-Threat-Detection-Platform",
       "highlights": [
         "Built large-scale data pipelines using Azure Data Factory and Databricks to collect and process security telemetry from simulated sources.",
         "Implemented transformation workflows using PySpark and stored curated datasets in ADLS Gen2 using Parquet and Delta formats.",
@@ -119,7 +121,43 @@
       ]
     },
     {
+      "title": "Hybrid Healthcare Data Engineering Pipeline (FHIR → Medallion → RBAC)",
+      "status": "In Progress",
+      "url": "https://github.com/Hariprasad-b-s/healthcare-data-engineering",
+      "highlights": [
+        "Engineered end-to-end medallion architecture (Bronze → Silver → Gold) ingesting synthetic FHIR R4 JSON bundles using PySpark, with dynamic fan-out automatically generating dedicated Silver tables for all 19 FHIR resource types.",
+        "Designed a hybrid ingestion system combining PySpark batch processing and real-time Kafka streaming via Docker.",
+        "Modeled a Kimball Star Schema with 2 fact tables and 9 dimensions for Claims analytics, using deterministic MD5 surrogate keys to maintain referential integrity across all FHIR resource joins.",
+        "Implemented HIPAA with PHI hashing and generalization, enforcing column level RBAC in a PostgreSQL governance layer with Admin and Analyst roles."
+      ]
+    },
+    {
+      "title": "Real-Time Market Event Simulator",
+      "status": "Completed",
+      "url": "https://github.com/Hariprasad-b-s/real-time-market-event-simulator",
+      "highlights": [
+        "Developed a real-time market event simulation system using Apache Kafka, processing high-frequency financial data streams with producer-consumer architecture to simulate realistic market conditions",
+        "Engineered multi-threaded event generation pipeline in Python that produces configurable market events (trades, orders, price updates) with customizable frequencies and batch sizes for performance testing",
+        "Implemented robust data streaming infrastructure with Kafka topic management, consumer group handling, and offset tracking to ensure reliable message delivery and fault tolerance",
+        "Built monitoring and analytics capabilities including real-time event consumption tracking, latency measurement, and throughput analysis to evaluate system performance under various load conditions",
+        "Designed flexible configuration system supporting multiple market scenarios (normal, volatile, crash conditions) with parameterized event generation for testing different market behaviors and stress scenarios"
+      ]
+    },
+    {
+      "title": "Databricks Spark Query Listener – Streaming Job Monitoring Framework",
+      "status": "In Progress",
+      "url": "",
+      "highlights": [
+        "Developed a Spark Query Listener based framework to capture job metrics, performance stats, and error events across structured streaming and batch pipelines in Databricks.",
+        "Integrated Kafka to stream Spark listener events into a centralized monitoring layer, enabling real time analysis and alerting.",
+        "Implemented a PySpark streaming pipeline to persist monitoring data in Delta tables managed by Unity Catalog for time series performance tracking.",
+        "Deployed infrastructure using Terraform and automated CI/CD with GitHub Actions, ensuring consistent provisioning across environments."
+      ]
+    },
+    {
       "title": "Retail Analytics Platform (AWS)",
+      "status": "In Progress",
+      "url": "",
       "highlights": [
         "Designed and implemented an automated ETL pipeline using AWS S3, Glue, Lambda, and Redshift to process 50K+ retail events/hour.",
         "Built data ingestion and transformation workflows using Python and PySpark, handling structured and semi-structured datasets at scale.",

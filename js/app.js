@@ -71,6 +71,7 @@ async function fetchData() {
         renderAbout(data.summary, data.profile);
         renderSkills(data.skills);
         renderExperience(data.experience);
+        renderProjects(data.projects);
         renderEducation(data.education);
         renderContact(data.profile);
     } catch (error) {
@@ -100,6 +101,24 @@ function renderHero(profile, experience) {
         div.className = 'stat-item';
         div.innerHTML = `<h3>${stat.value}</h3><p>${stat.label}</p>`;
         statsContainer.appendChild(div);
+    });
+
+    // Populate hero social sidebar
+    const socialContainer = document.getElementById('hero-social');
+    const socials = [
+        { icon: 'fab fa-linkedin-in', href: profile.contact.linkedin, label: 'LinkedIn' },
+        { icon: 'fab fa-github', href: profile.contact.github, label: 'GitHub' },
+        { icon: 'fas fa-envelope', href: `mailto:${profile.contact.email}`, label: 'Email' }
+    ];
+
+    socials.forEach(s => {
+        const a = document.createElement('a');
+        a.href = s.href;
+        a.target = '_blank';
+        a.className = 'hero-social-link';
+        a.setAttribute('aria-label', s.label);
+        a.innerHTML = `<i class="${s.icon}"></i><span>${s.label}</span>`;
+        socialContainer.appendChild(a);
     });
 }
 
@@ -250,6 +269,38 @@ function renderEducation(education) {
             </div>
         `;
         container.appendChild(item);
+    });
+}
+
+function renderProjects(projects) {
+    const container = document.getElementById('projects-container');
+
+    projects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+
+        const bullets = project.highlights.map(h => `<li>${h}</li>`).join('');
+        const statusClass = project.status === 'Completed' ? 'completed' : 'in-progress';
+        const githubBtn = project.url
+            ? `<a href="${project.url}" target="_blank" class="btn project-github-btn"><i class="fab fa-github"></i> View on GitHub</a>`
+            : '';
+
+        card.innerHTML = `
+            <div class="project-header">
+                <i class="fas fa-folder-open project-icon"></i>
+                <div>
+                    <h3>${project.title}</h3>
+                    <span class="project-status ${statusClass}">${project.status}</span>
+                </div>
+            </div>
+            <ul class="project-details">
+                ${bullets}
+            </ul>
+            <div class="project-footer">
+                ${githubBtn}
+            </div>
+        `;
+        container.appendChild(card);
     });
 }
 
