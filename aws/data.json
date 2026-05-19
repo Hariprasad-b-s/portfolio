@@ -1,0 +1,133 @@
+{
+  "profile": {
+    "name": "Hariprasad Bathini Sankaran",
+    "role": "AWS Data Engineer",
+    "location": "Cincinnati, Ohio",
+    "contact": {
+      "phone": "+1 (513) 227-1668",
+      "email": "hariprasad.sankaran@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/hariprasadbs",
+      "github": "https://github.com/Hariprasad-b-s"
+    }
+  },
+  "summary": "Data Engineer with 4+ years of experience designing large-scale pipelines, ETL/ELT workflows, and secure data solutions using Python, PySpark, and SQL on AWS. Proficient in batch and real-time streaming using AWS Glue, Lambda, Kinesis, and EMR, with expertise in S3-based Data Lakes, Redshift, and Terraform CI/CD. Experienced in data modeling and pipeline development across security and healthcare domains with advanced analytics.",
+  "skills": {
+    "Data Engineering": [
+      "Python", "SQL", "PySpark", "ETL/ELT", "Data Modeling",
+      "Data Pipelines", "Data Warehousing", "Medallion Architecture", "Data Lake"
+    ],
+    "Big Data & Processing": [
+      "AWS Glue", "EMR", "Apache Spark", "Delta Lake",
+      "Kinesis Streaming", "Batch Processing", "Redshift", "PostgreSQL"
+    ],
+    "Business Intelligence": [
+      "AWS QuickSight", "Operational Analytics",
+      "Data Visualization", "Reporting", "Database"
+    ],
+    "Cloud & DevOps": [
+      "AWS S3", "Lambda", "Glue", "EMR", "Kinesis",
+      "Redshift", "Athena", "IAM", "CloudWatch",
+      "Terraform", "CI/CD", "Git", "GitHub"
+    ],
+    "Tools & Practices": [
+      "VS Code", "Jupyter", "Unix/Linux", "Agile",
+      "Documentation", "Version Control", "AI Agents", "HL7", "FHIR"
+    ],
+    "Generative AI & LLMs": [
+      "Prompt Engineering", "Cursor", "GitHub Copilot",
+      "Gemini CLI", "AI Assisted Development"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Data Engineer",
+      "company": "Comcast Corporation",
+      "location": "Chennai, India",
+      "period": "Aug 2023 – Aug 2025",
+      "highlights": [
+        "Architected and maintained AWS Glue and EMR pipelines processing 1TB of daily cybersecurity logs from S3 for threat detection.",
+        "Automated AWS Glue orchestration workflows for 10+ ETL pipelines with 5 concurrent executions, ensuring zero dependency failures.",
+        "Developed modular, parameterized PySpark scripts to standardize data cleansing and accelerate new telemetry source onboarding.",
+        "Optimized storage and compute using S3 partitioning, Glue job bookmarks, and columnar formats, reducing AWS compute costs by 20%.",
+        "Managed AWS IAM and Lake Formation policies via Terraform, enforcing role-based access controls (RBAC) across teams.",
+        "Accelerated ETL pipeline development using GenAI tools (GitHub Copilot), reducing AWS deployment time from 10 days to 7 days.",
+        "Monitored pipeline health and data quality metrics using CloudWatch, providing timely resolutions to ensure SLA compliance."
+      ]
+    },
+    {
+      "role": "Data Engineer",
+      "company": "Infosys Ltd.",
+      "location": "Chennai, India",
+      "period": "Jun 2021 – Aug 2023",
+      "highlights": [
+        "Developed ETL pipelines integrating raw operational datasets into analytics-ready layers in S3 and Redshift using AWS Glue.",
+        "Migrated complex T-SQL stored procedures to distributed PySpark workflows on EMR, reducing batch processing time by 30 mins/run.",
+        "Designed metadata-driven ingestion frameworks using AWS Glue Data Catalog to support scalable onboarding of new data sources.",
+        "Built Python REST API ingestion frameworks with Lambda, retry logic, and pagination, reducing integration time from weeks to days.",
+        "Constructed multi-dimensional data models (fact and dimension tables) in Redshift to support BI dashboards and reporting.",
+        "Established automated data quality checks using Python and AWS Glue to detect schema drift and prevent corrupted downstream.",
+        "Partnered with BI analysts to design and deliver optimized Redshift tables, powering operational dashboards and reducing query latency."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Security Log Analytics and Threat Detection Platform (AWS)",
+      "status": "Completed",
+      "url": "https://github.com/Hariprasad-b-s/Security-Log-Analytics-and-Threat-Detection-Platform",
+      "highlights": [
+        "Engineered scalable data pipelines using AWS Glue and EMR to ingest and process security data from simulated S3 sources.",
+        "Developed transformation workflows with PySpark and stored curated datasets in S3 using Parquet and Delta formats.",
+        "Architected medallion architecture to enable operational analytics and support historical reporting workflows with automation.",
+        "Implemented data validation checks and CloudWatch monitoring logic to assess pipeline reliability and ensure data quality in production."
+      ]
+    },
+    {
+      "title": "Hybrid Healthcare Data Engineering Pipeline (FHIR → Medallion → RBAC)",
+      "status": "In Progress",
+      "url": "https://github.com/Hariprasad-b-s/healthcare-data-engineering",
+      "highlights": [
+        "Engineered end-to-end medallion architecture (Bronze → Silver → Gold) ingesting synthetic FHIR JSON bundles using PySpark.",
+        "Designed a hybrid ingestion system combining PySpark batch processing and real-time Kafka streaming via Docker.",
+        "Modeled a Kimball methodology with facts and dimensions for Claims analytics, using MD5 surrogate keys to maintain integrity.",
+        "Implemented HIPAA compliance with PHI hashing and generalization, enforcing RBAC within PostgreSQL as a data warehouse."
+      ]
+    },
+    {
+      "title": "Universal AI Assistant Chrome Extension (AI Vibecoded)",
+      "status": "Completed",
+      "url": "",
+      "highlights": [
+        "Leveraged AI pair-programming to rapidly architect, iterate, and deploy a complex Chrome extension integrating ChatGPT, Claude, and Gemini natively into the browser.",
+        "Implemented Chrome's sidePanel API to create a seamless, persistent chat experience featuring automatic session-cookie sharing.",
+        "Built a dynamic, floating UI component that calculates getBoundingClientRect to seamlessly render action buttons next to user text selections."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Cincinnati",
+      "period": "Aug 2025 - Dec 2026",
+      "degree": "Master of Science in Information Technology",
+      "location": "Cincinnati, Ohio, USA"
+    },
+    {
+      "institution": "Anna University",
+      "period": "Jun 2016 - Nov 2020",
+      "degree": "Bachelor of Engineering in Electronics and Communication Engineering",
+      "location": "TamilNadu, India"
+    }
+  ],
+  "awsServices": [
+    { "name": "S3", "icon": "fa-database", "desc": "Data Lake Storage" },
+    { "name": "Glue", "icon": "fa-cogs", "desc": "ETL & Cataloging" },
+    { "name": "EMR", "icon": "fa-server", "desc": "Spark Processing" },
+    { "name": "Lambda", "icon": "fa-bolt", "desc": "Serverless Compute" },
+    { "name": "Kinesis", "icon": "fa-stream", "desc": "Real-time Streaming" },
+    { "name": "Redshift", "icon": "fa-warehouse", "desc": "Data Warehouse" },
+    { "name": "Athena", "icon": "fa-search", "desc": "Serverless Queries" },
+    { "name": "CloudWatch", "icon": "fa-chart-line", "desc": "Monitoring" },
+    { "name": "IAM", "icon": "fa-shield-alt", "desc": "Access Control" },
+    { "name": "Lake Formation", "icon": "fa-water", "desc": "Data Governance" }
+  ]
+}
