@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hariprasad | GCP Data Engineer Portfolio</title>
+    <meta name="description"
+        content="GCP-focused portfolio of Hariprasad Bathini Sankaran — Data Engineer specializing in BigQuery, Dataflow, Dataproc, Cloud Storage, Pub/Sub, and Terraform.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="gcp-styles.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="scanline"></div>
+
+    <nav class="navbar">
+        <div class="logo">&lt;H/B&gt;</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gcp-services">GCP Stack</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="terminal-badge">
+                    <span class="gcp-badge"><i class="fab fa-google"></i> GCP</span> Data Engineer
+                </div>
+                <h1 id="hero-name">Loading...</h1>
+                <p id="hero-role" class="subtitle">Building scalable data architectures on Google Cloud</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a href="#" class="btn secondary-btn" id="resume-btn" onclick="openResumeModal(event)">View Resume</a>
+                </div>
+                <div class="stat-grid" id="hero-stats">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            <div class="hero-social-sidebar" id="hero-social">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container">
+            <h2 class="section-title"><span class="hash">#</span> About_Me</h2>
+            <div class="about-grid">
+                <div class="about-text" id="about-content">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="dots">
+                            <span class="red"></span><span class="yellow"></span><span class="green"></span>
+                        </div>
+                        <span class="title">gcp_profile.json</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre><code class="language-json" id="code-block">Loading...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GCP Services Section -->
+        <section id="gcp-services" class="container">
+            <h2 class="section-title"><span class="hash">#</span> GCP_Stack</h2>
+            <div class="gcp-services-grid" id="gcp-services-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="container">
+            <h2 class="section-title"><span class="hash">#</span> Skill_Set</h2>
+            <div class="skills-grid" id="skills-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="container">
+            <h2 class="section-title"><span class="hash">#</span> Experience_Log</h2>
+            <div class="timeline" id="experience-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container">
+            <h2 class="section-title"><span class="hash">#</span> Project_Builds</h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="container">
+            <h2 class="section-title"><span class="hash">#</span> Education_Init</h2>
+            <div class="timeline" id="education-container">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2 class="section-title"><span class="hash">#</span> Init_Connection</h2>
+            <div class="contact-card">
+                <div class="contact-info" id="contact-container">
+                    <!-- Populated by JS -->
+                </div>
+                <form id="contact-form" class="contact-form" method="POST">
+                    <div class="form-group">
+                        <label>ID / Name</label>
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Protocol / Email</label>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Payload / Message</label>
+                        <textarea rows="5" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Transmit Data <i class="fas fa-paper-plane"></i></button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hariprasad Bathini Sankaran. Built with <i class="fas fa-code"></i> & <i class="fab fa-google"></i> Google Cloud.</p>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Resume Preview</h2>
+                <span class="close-modal" onclick="closeResumeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <iframe src="../assets/Hariprasad_Bathini Sankaran_Resume_GCP.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                    width="100%" height="600px">
+                </iframe>
+            </div>
+            <div class="modal-footer">
+                <a href="../assets/Hariprasad_Bathini Sankaran_Resume_GCP.pdf" download="Hariprasad_GCP_Resume.pdf"
+                    class="btn primary-btn"><i class="fas fa-download"></i> Download PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/visuals.js"></script>
+    <script type="module" src="gcp-app.js"></script>
+</body>
+
+</html>

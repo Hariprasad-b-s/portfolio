@@ -1,0 +1,116 @@
+{
+  "profile": {
+    "name": "Hariprasad Bathini Sankaran",
+    "role": "GCP Data Engineer",
+    "location": "Cincinnati, OH",
+    "contact": {
+      "phone": "(513) 227-1668",
+      "email": "hariprasad.sankaran@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/hariprasadbs",
+      "github": "https://github.com/Hariprasad-b-s"
+    }
+  },
+  "summary": "Data Engineer with experience designing large-scale pipelines, ETL/ELT workflows, and secure data solutions using Python, Apache Spark, Apache Beam, and SQL on Google Cloud Platform. Skilled in designing high-performance batch and streaming pipelines on GCP using Dataflow, BigQuery, Cloud Composer, Pub/Sub, and Terraform.",
+  "skills": {
+    "Data Engineering": [
+      "Python", "SQL", "Apache Spark", "Apache Beam", "ETL/ELT Pipeline Design",
+      "Dimensional Data Modeling", "Star Schema", "Snowflake Schema"
+    ],
+    "GCP & Big Data": [
+      "Google Cloud Dataflow", "BigQuery", "Cloud Composer (Airflow)", "Pub/Sub",
+      "Cloud Storage", "Dataproc", "Cloud Functions", "GCS"
+    ],
+    "NoSQL & Databases": [
+      "Bigtable", "Firestore", "MongoDB", "PostgreSQL", "MySQL", "Unix/Linux Environments"
+    ],
+    "Business Intelligence": [
+      "Looker", "Google Data Studio", "Tableau", "Data Warehouse Design", "Reporting Systems"
+    ],
+    "Cloud & DevOps": [
+      "Google Cloud Platform (GCP)", "Docker", "Kubernetes", "CI/CD", "Git", "Terraform"
+    ],
+    "Tools & Practices": [
+      "Stakeholder Collaboration", "Technical Documentation", "Agile/Scrum", "Code Review"
+    ],
+    "Generative AI & LLMs": [
+      "Prompt Engineering", "Claude Code", "GitHub Copilot", "Gemini CLI", "AI-Assisted Development", "ML Pipeline Integration"
+    ]
+  },
+  "experience": [
+    {
+      "role": "Data Engineer",
+      "company": "Comcast Corporation",
+      "location": "Chennai, India",
+      "period": "Aug 2023 – Aug 2025",
+      "highlights": [
+        "Designed and deployed scalable ETL pipelines on Google Cloud Dataflow using Apache Beam to ingest and transform 10+ TB of structured and unstructured data daily, reducing pipeline latency by 35%.",
+        "Built dimensional data models (star and snowflake schemas) in BigQuery to support business intelligence reporting, enabling stakeholders to query 6-month historical datasets with sub-5-second response times.",
+        "Orchestrated complex multi-step data workflows using Cloud Composer (Apache Airflow), replacing manual batch scripts and reducing data processing failures by 40% through automated retry and alerting logic.",
+        "Partnered with data scientists to productionize three machine learning models by wrapping scoring logic into reusable Dataflow transforms and scheduling batch inference jobs via Cloud Composer, cutting deployment time from weeks to days.",
+        "Integrated Pub/Sub and Cloud Functions to build real-time event-driven pipelines for asynchronous data ingestion from upstream microservices, supporting both synchronous API feeds and async streaming use cases.",
+        "Authored and maintained comprehensive technical documentation for 15+ pipelines and data models; conducted regular code reviews that improved team code quality and reduced production incidents by 25%."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Real-Time Streaming Analytics Platform on GCP",
+      "status": "Completed",
+      "url": "",
+      "highlights": [
+        "Architected an end-to-end streaming pipeline using Pub/Sub and Apache Beam on Dataflow to process clickstream events in real time, delivering aggregated metrics to a BigQuery reporting layer consumed by Looker dashboards.",
+        "Implemented windowed aggregations (tumbling and sliding windows) in Beam to compute session-level KPIs, reducing reporting lag from 4 hours (batch) to under 2 minutes.",
+        "Designed a dead-letter queue pattern in Pub/Sub to capture and reprocess malformed records, improving overall pipeline data completeness from 94% to 99.6%.",
+        "Deployed pipeline infrastructure using Terraform on GCP, enabling repeatable environment provisioning across dev, staging, and production with zero manual configuration drift."
+      ]
+    },
+    {
+      "title": "Enterprise Data Warehouse Modernization (BigQuery Migration)",
+      "status": "Completed",
+      "url": "",
+      "highlights": [
+        "Led migration of a legacy on-premise data warehouse to BigQuery, redesigning 30+ dimensional models to leverage partitioning and clustering, which cut average query costs by 50% and improved performance by 3x.",
+        "Wrote Python-based data validation scripts using exploratory SQL queries to audit source-to-target data integrity across 20+ tables, identifying and resolving 12 critical data quality issues before go-live.",
+        "Built reusable ELT templates for ingesting structured data from Cloud Storage and unstructured data from Firestore (NoSQL), standardizing ingestion patterns across four business units.",
+        "Collaborated with stakeholders across product, finance, and operations to gather requirements and deliver the migration on schedule within a 6-month timeline and under budget by 8%."
+      ]
+    },
+    {
+      "title": "ML Pipeline Integration for Churn Prediction Model",
+      "status": "Completed",
+      "url": "",
+      "highlights": [
+        "Partnered with the data science team to transition a churn prediction model from a notebook prototype into a production Dataflow pipeline, enabling weekly batch scoring of 2M+ customer records in under 90 minutes.",
+        "Designed feature engineering transformations in PySpark on Dataproc to process complex behavioral data, reducing feature computation time by 60% compared to the original pandas-based approach.",
+        "Modeled complex business logic for customer lifecycle stages in BigQuery using layered CTEs and materialized views, giving downstream analysts clean, documented datasets without rewriting raw source queries.",
+        "Produced detailed technical documentation covering data lineage, schema definitions, and pipeline runbooks, enabling the support engineering team to independently operate and troubleshoot production jobs."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Cincinnati",
+      "period": "Aug 2025 – Dec 2026",
+      "degree": "Master of Science in Information Technology",
+      "location": "Cincinnati, Ohio, USA"
+    },
+    {
+      "institution": "Anna University",
+      "period": "Jun 2016 – Nov 2020",
+      "degree": "Bachelor of Engineering in Electronics and Communication Engineering",
+      "location": "TamilNadu, India"
+    }
+  ],
+  "gcpServices": [
+    { "name": "BigQuery", "icon": "fa-database", "desc": "Data Warehouse & Analytics" },
+    { "name": "Dataflow", "icon": "fa-stream", "desc": "Batch & Stream Processing" },
+    { "name": "Dataproc", "icon": "fa-server", "desc": "Managed Spark/Hadoop" },
+    { "name": "Cloud Storage", "icon": "fa-cloud", "desc": "Object Storage (Data Lake)" },
+    { "name": "Pub/Sub", "icon": "fa-envelope-open", "desc": "Real-time Messaging" },
+    { "name": "Composer", "icon": "fa-project-diagram", "desc": "Managed Airflow" },
+    { "name": "Cloud Functions", "icon": "fa-bolt", "desc": "Serverless Compute" },
+    { "name": "Looker", "icon": "fa-chart-bar", "desc": "BI & Visualization" },
+    { "name": "Data Catalog", "icon": "fa-tags", "desc": "Metadata & Governance" },
+    { "name": "IAM", "icon": "fa-shield-alt", "desc": "Access Control" }
+  ]
+}
