@@ -64,12 +64,13 @@ function setupMobileMenu() {
 
 async function fetchData() {
     try {
-        const response = await fetch('assets/data.json');
+        const response = await fetch(`assets/data.json?v=${Date.now()}`);
         const data = await response.json();
 
         renderHero(data.profile, data.experience);
         renderAbout(data.summary, data.profile);
         renderSkills(data.skills);
+        renderCertifications(data.certifications);
         renderExperience(data.experience);
         renderProjects(data.projects);
         renderEducation(data.education);
@@ -162,6 +163,30 @@ function renderSkills(skills) {
         `;
         container.appendChild(card);
     }
+}
+
+function renderCertifications(certifications) {
+    const container = document.getElementById('certifications-container');
+    if (!certifications || !certifications.length) return;
+
+    certifications.forEach(cert => {
+        const card = document.createElement('div');
+        card.className = 'cert-card';
+
+        const linkHTML = cert.url
+            ? `<a href="${cert.url}" target="_blank" class="cert-link"><i class="fas fa-external-link-alt"></i> Verify</a>`
+            : '';
+
+        card.innerHTML = `
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <div class="cert-body">
+                <h3 class="cert-name">${cert.name}</h3>
+                <span class="cert-date"><i class="fas fa-calendar-alt"></i> ${cert.date}</span>
+            </div>
+            ${linkHTML}
+        `;
+        container.appendChild(card);
+    });
 }
 
 function renderExperience(experience) {
