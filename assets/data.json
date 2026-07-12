@@ -10,32 +10,96 @@
       "github": "https://github.com/Hariprasad-b-s"
     }
   },
-  "summary": "Data Engineer with 5+ years building scalable batch and streaming pipelines that turn raw, multi-terabyte data into analytics-ready assets teams rely on daily. Track record of cutting processing latency, unifying ingestion across 50+ sources, and shipping reusable frameworks that shorten new-feed delivery from weeks to days. Deep Databricks and PySpark expertise across Azure and AWS, with hands-on domain experience in cybersecurity telemetry and healthcare (FHIR) data.",
+  "summary": "Data Engineer with 5+ years architecting enterprise data platforms, ELT/ETL pipelines, and analytical frameworks across Databricks, Snowflake, dbt, and Apache Airflow. Expert in PySpark distributed processing, medallion (staging/marts) architectures, and Kimball dimensional design on AWS and Azure. Track record of processing multi-terabyte daily telemetry, unifying 50+ sources, cutting latency 30%+, and deploying reusable frameworks that shrink delivery timelines from weeks to days. Deep Structured Streaming and Kafka expertise, with domain depth in cybersecurity (SIEM, Splunk, Cribl), healthcare (FHIR/HIPAA), and GenAI/LLM systems.",
   "skills": {
-    "Data Engineering": [
-      "Databricks", "PySpark", "Apache Spark", "Spark SQL", "Structured Streaming", "Python", "SQL", "Delta Lake", "ETL/ELT", "Data Modeling (Dimensional / Star Schema)", "Medallion Architecture", "Unity Catalog", "Databricks Workflows", "Autoloader", "Data Quality & Governance"
+    "Warehousing & ELT": [
+      "Snowflake",
+      "dbt",
+      "SQL",
+      "ELT/ETL",
+      "Data Modeling (Kimball, Star & Snowflake Schema, Fact/Dimension)",
+      "Data Warehousing",
+      "Layered staging→marts architecture (medallion)",
+      "Data Quality & Validation",
+      "Data Governance",
+      "Metadata-Driven Ingestion"
+    ],
+    "Orchestration & Ingestion": [
+      "Apache Airflow (DAG design & generators)",
+      "Databricks Workflows",
+      "Apache Kafka",
+      "Structured Streaming",
+      "Cribl",
+      "REST API Ingestion (retry logic, pagination)",
+      "AWS SQS event routing",
+      "Autoloader"
     ],
     "Cloud & DevOps": [
-      "Azure (Data Factory, ADLS Gen2, SQL Server)",
-      "AWS (Lambda, S3)",
-      "Terraform",
+      "AWS (S3, Lambda, Glue, SQS, Redshift, Step Functions, Secrets Manager, KMS, IAM)",
+      "Azure (Data Factory, ADLS Gen2, Azure SQL/SQL Server, Synapse, Key Vault, Entra ID)",
+      "Terraform (IaC)",
+      "CI/CD (Azure DevOps, GitHub Actions)",
       "Git/GitHub",
-      "CI/CD"
+      "Docker"
     ],
-    "Streaming & Ingestion": [
-      "Apache Kafka", "Cribl", "REST API Ingestion", "Autoloader"
+    "Data Engineering": [
+      "Python",
+      "PySpark",
+      "Apache Spark",
+      "Spark SQL",
+      "Data Structures & Algorithms",
+      "Batch & real-time streaming pipelines"
+    ],
+    "Lakehouse": [
+      "Databricks (Certified Data Engineer Professional)",
+      "Delta Lake",
+      "Delta Live Tables",
+      "Unity Catalog",
+      "MLflow"
+    ],
+    "Security & Compliance": [
+      "SIEM (Splunk)",
+      "CrowdStrike EDR telemetry",
+      "Cribl log routing",
+      "SOC enablement",
+      "RBAC / least-privilege",
+      "Column-level security",
+      "Dynamic data masking",
+      "PHI/HIPAA handling"
+    ],
+    "Databases & Stores": [
+      "PostgreSQL",
+      "DuckDB",
+      "ChromaDB",
+      "JSON",
+      "CSV",
+      "Parquet",
+      "Iceberg"
+    ],
+    "GenAI & LLMs": [
+      "RAG",
+      "LangChain",
+      "Ollama",
+      "Vector embeddings",
+      "Prompt engineering",
+      "AI-assisted development (Claude Code, Copilot, Gemini)"
     ],
     "Business Intelligence": [
-      "Power BI", "Tableau", "Dashboards", "Operational Analytics", "Reporting"
+      "Power BI",
+      "Tableau",
+      "Dashboards",
+      "Operational Analytics",
+      "Reporting"
     ],
-    "Programming": [
-      "Python", "C++", "Java"
-    ],
-    "Familiar with": [
-      "Snowflake", "Apache Airflow", "dbt", "MLflow"
-    ],
-    "Tools": [
-      "VS Code", "Cursor", "GitHub Copilot", "Genie AI", "Unix/Bash"
+    "Programming & Practices": [
+      "Python",
+      "SQL",
+      "C++",
+      "Java",
+      "Unix/Bash",
+      "SDLC coding standards",
+      "Multiprocessing/Threading",
+      "Agile Methodology"
     ]
   },
   "certifications": [
@@ -63,25 +127,29 @@
       "location": "Cincinnati, Ohio",
       "period": "Jan 2026 – Present",
       "highlights": [
-        "Provided supervisor with one reliable source of truth by building and maintaining ETL pipelines that centralize package center data into a single reporting database, replacing scattered manual records.",
-        "Delivered Power BI dashboards that turn raw package center metrics into at-a-glance operational views, speeding day-to-day decisions for the team.",
+        "Provided supervisor with one reliable source of truth by building and maintaining ETL pipelines to a single reporting database.",
+        "Delivered Power BI dashboards that turn raw package center metrics into at-a-glance operational views, day-to-day decisions for the team.",
         "Reduced report generation time by optimizing SQL queries and data models, giving stakeholders faster access to the metrics they act on.",
-        "Reduced manual data verification effort with automated validation scripts that catch integrity and consistency issues across sources before they reach reports."
+        "Reduced manual data-verification effort with automated Python validation scripts that catch integrity and consistency issues."
       ]
     },
     {
-      "role": "Data Engineer",
+      "role": "Data Engineer 2 - Cyber Security",
       "company": "Comcast Corporation",
       "location": "Chennai, India",
       "period": "Aug 2023 – Aug 2025",
       "highlights": [
-        "Cut new data source onboarding effort 40% by building reusable pipeline templates the whole team adopted, delivering new analytics feeds in days instead of weeks.",
-        "Reduced data processing latency 30%+ by orchestrating Databricks Workflows and Delta Live Tables with Terraform provisioned, auto-scaling compute landing in Unity Catalog managed Delta tables.",
-        "Unified logs from 50+ security tools into a single analytics layer, automating ingestion with Cribl, Airflow, and AWS Lambda (JSON → S3) and ending fragmented, tool by tool data access for analysts.",
-        "Gave threat-detection teams correlated, query ready data across global networks by building Databricks pipelines that process multi-terabyte telemetry from firewalls, endpoints, and detection systems.",
-        "Enabled threat hunting teams to spot suspicious activity within minutes through realtime Structured Streaming and Kafka pipelines for cybersecurity logs.",
-        "Sped threat investigations for downstream analysts by engineering a Bronze → Silver → Gold medallion architecture that delivers clean, structured, analytics-ready security data.",
-        "Improved incident response accuracy by partnering with security analysts and data scientists to design log schemas, enrich threat intelligence feeds, and operationalize anomaly-detection models (Databricks MLflow)."
+        "Engineered enterprise security pipelines in Snowflake and Databricks, processing multi-terabyte daily telemetry into a centralized warehouse powering global network anomaly detection and event correlation.",
+        "Reduced data processing latency 30%+ by orchestrating automated ELT workflows with Apache Airflow and Databricks Workflows on Terraform-provisioned, auto-scaling compute.",
+        "Unified logs from 50+ security tools into a single analytics layer, automating ingestion with Cribl, Airflow, and AWS Lambda (JSON → S3) and ending fragmented, tool-by-tool data access for analysts.",
+        "Cut new data-source onboarding effort 40% by building reusable ingestion templates and Airflow DAG generators the whole team adopted, delivering new analytics feeds in days instead of weeks.",
+        "Sped threat investigations for downstream analysts by engineering a layered staging→intermediate→marts (medallion) architecture of SQL-first transformations delivering clean, tested, analytics-ready security data.",
+        "Designed a log-routing architecture with Cribl ingesting high-volume telemetry from Splunk, plus custom REST API integrations pulling endpoint telemetry directly from CrowdStrike.",
+        "Enabled threat-hunting teams to spot suspicious activity within minutes through Structured Streaming and Kafka pipelines for logs.",
+        "Ensured data integrity across 10+ ELT pipelines running up to 5 concurrent executions with zero dependency failures through automated orchestration and dependency management.",
+        "Cut warehouse and storage costs $5,000/year through automated table-maintenance jobs, partition pruning, and clustering/compaction strategies for query-performance tuning.",
+        "Achieved consistent, reproducible releases with zero manual intervention by implementing Terraform modules for CI/CD for deploying jobs, warehouses/clusters, and permissions across dev, staging, and production.",
+        "Accelerated ELT development cycles 30% by integrating AI-assisted tools (GitHub Copilot, Gemini, Claude Code) into development, validation, and documentation."
       ]
     },
     {
@@ -91,12 +159,14 @@
       "location": "Chennai, India",
       "period": "Jun 2021 – Aug 2023",
       "highlights": [
-        "Reduced new data source integration time by 50% organization wide by building a reusable Python REST API ingestion notebook that other teams adopted for external data onboarding.",
-        "Cut daily batch runtime by 30+ minutes and improved performance 15% by converting legacy SQL/T-SQL stored procedures into modular PySpark ETL frameworks.",
-        "Improved data consistency and refresh accuracy 40%+ by engineering large-scale ETL in Azure Databricks and ADF that ingests and aggregates multi-source data into ADLS Gen2.",
-        "Accelerated transformations across billions of records by tuning PySpark partitioning, caching, and shuffle strategies for high-performance distributed jobs.",
-        "Increased pipeline scalability and maintainability with a metadata-driven ADF ingestion framework automating source-to-target mapping, schema validation, and dynamic orchestration.",
-        "Enabled self-service analytics and executive dashboards by designing dimensional (fact/dimension) data models for reliable, decision-ready reporting."
+        "Reduced new data-source integration time 50% organization-wide by building a reusable Python REST API ingestion notebook (retry logic, pagination) that other teams adopted for external data onboarding.",
+        "Enabled self-service analytics and executive dashboards by designing dimensional star and snowflake schema data models (facts/dimensions) in the cloud data warehouse for reliable, decision-ready reporting.",
+        "Cut daily batch runtime by 30+ minutes and improved performance 15% by converting legacy SQL/T-SQL stored procedures into modular, version-controlled transformation frameworks in PySpark.",
+        "Increased pipeline scalability and maintainability with a metadata-driven ingestion framework in ADF automating source-to-target mapping, schema validation, and dynamic orchestration.",
+        "Improved data consistency and refresh accuracy 40%+ by engineering large-scale ELT in Azure Databricks and ADF that ingests and aggregates multi-source data into ADLS Gen2.",
+        "Accelerated transformations across billions of records by tuning partitioning, caching, and shuffle strategies for high-performance jobs.",
+        "Reduced maintenance windows 30 min/run via automated table lifecycle management using Python multiprocessing to parallelize vacuum and optimize operations.",
+        "Hardened business-critical feeds with rigorous data quality and validation checks (including automated schema-drift detection in Python) across all ingestion layers."
       ]
     },
     {
@@ -107,7 +177,8 @@
       "highlights": [
         "Improved report accuracy and cut data-request turnaround by authoring and optimizing complex SQL for BI reports used by product and marketing teams.",
         "Reduced manual effort in recurring workflows with Python scripts for data cleaning, preprocessing, and file automation.",
-        "Supported automation of key business metrics and dashboards by building and maintaining SQL-driven pipelines for internal reporting platforms."
+        "Supported automation of key business metrics and dashboards by building and maintaining SQL-driven pipelines for internal reporting platforms.",
+        "Collaborated with cross-functional teams to translate data requirements into structured extraction and transformation processes."
       ]
     }
   ],
@@ -117,19 +188,31 @@
       "status": "Completed",
       "url": "https://github.com/Hariprasad-b-s/Security-Log-Analytics-and-Threat-Detection-Platform",
       "highlights": [
-        "Built an end-to-end security-telemetry analytics platform on ADF and Databricks, processing firewall, endpoint, and network logs from ADLS Gen2 into SIEM-ready datasets via a Bronze → Silver → Gold medallion architecture.",
+        "Built an end-to-end security-telemetry analytics platform on ADF and Databricks, processing firewall, endpoint, and network logs from ADLS Gen2 into SIEM-ready curated datasets via a layered staging→marts (medallion) architecture.",
         "Automated infrastructure and scheduling with Terraform, Azure DevOps, and Apache Airflow for version-controlled, SLA-compliant, fully auditable production runs.",
+        "Developed PySpark and SQL transformations to clean, enrich, and structure raw JSON security events into Parquet/Delta datasets, with schema validation and data-quality checks that flag failed loads pre-consumption.",
         "Delivered Power BI and Synapse dashboards surfacing real-time threat anomalies, top attack sources, and detection metrics for cybersecurity teams."
       ]
     },
     {
-      "title": "Hybrid Healthcare Data Engineering Pipeline (FHIR → Medallion → RBAC)",
+      "title": "Hybrid Healthcare Data Engineering Pipeline (FHIR → Warehouse Star Schema → RBAC)",
       "status": "In Progress",
       "url": "https://github.com/Hariprasad-b-s/healthcare-data-engineering",
       "highlights": [
-        "Engineered a Bronze → Silver → Gold pipeline ingesting synthetic FHIR R4 bundles with PySpark, using dynamic resource fan-out to auto-discover and build dedicated Silver tables for Claims, Patients, Encounters, and Conditions.",
-        "Combined batch (PySpark) and real-time streaming (Kafka on Docker → Structured Streaming) to simulate concurrent hospital feeds across 50 partitioned data folders.",
-        "Modeled a Kimball star schema (2 fact, 9 dimension tables) and a PostgreSQL serving layer with RBAC, column-level security, and dynamic masking enforcing field-level PHI restrictions across Admin and Clinical Analyst roles."
+        "Engineered a layered staging→intermediate→marts (Bronze→Silver→Gold) pipeline ingesting synthetic FHIR R4 bundles with PySpark, using dynamic resource fan-out to auto-discover and build dedicated staging tables for all 19 FHIR resource types, including Claims, Patients, Encounters, and Conditions.",
+        "Modeled a Kimball-compliant star schema (2 fact, 9 dimension tables) in the warehouse serving layer using deterministic MD5 surrogate keys to maintain referential integrity across complex FHIR reference patterns spanning Claim, Condition, and Procedure resources.",
+        "Combined batch and real-time streaming (Python Kafka Producer → Kafka on Docker → Structured Streaming) to simulate concurrent hospital feeds across 50 partitioned data folders."
+      ]
+    },
+    {
+      "title": "Local RAG Pipeline: Healthcare Patient Data Q&A with LangChain and Ollama",
+      "status": "Completed",
+      "url": "",
+      "highlights": [
+        "Built an end-to-end RAG pipeline using LangChain and locally hosted Gemma 4 (12B) via Ollama, enabling fully offline, privacy-preserving Q&A over structured healthcare data without external API dependencies.",
+        "Engineered a structured-to-text transformation layer converting Parquet records (output of an ETL pipeline) into semantically rich text summaries, making structured patient data searchable via natural language.",
+        "Built a vector ingestion pipeline using nomic-embed-text embeddings and ChromaDB as the local vector store, supporting batch ingestion of multi-part Parquet datasets with persistent storage.",
+        "Implemented an interactive conversational interface that retrieves semantically relevant patient records from ChromaDB and passes them as grounded context to Gemma 4, reducing hallucinations and anchoring responses to real data."
       ]
     },
     {
@@ -183,14 +266,28 @@
       "period": "Aug 2025 – Dec 2026",
       "degree": "Master of Science in Information Technology",
       "location": "Cincinnati, Ohio, USA",
-      "coursework": ["Software Engineering", "Human-Computer Interaction", "Web Development", "Database Systems", "Cloud Computing", "Data Engineering"]
+      "coursework": [
+        "Software Engineering",
+        "Human-Computer Interaction",
+        "Web Development",
+        "Database Systems",
+        "Cloud Computing",
+        "Data Engineering"
+      ]
     },
     {
       "institution": "Anna University",
       "period": "July 2016 – Nov 2020",
       "degree": "Bachelor of Engineering in Electronics and Communications Engineering",
       "location": "TamilNadu, India",
-      "coursework": ["Programming in C", "C++", "Java", "Python", "Data Structures and Algorithms", "Big Data"]
+      "coursework": [
+        "Programming in C",
+        "C++",
+        "Java",
+        "Python",
+        "Data Structures and Algorithms",
+        "Big Data"
+      ]
     }
   ]
 }
