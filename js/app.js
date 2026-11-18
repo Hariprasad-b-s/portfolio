@@ -67,7 +67,7 @@ async function fetchData() {
         const response = await fetch(`assets/data.json?v=${Date.now()}`);
         const data = await response.json();
 
-        renderHero(data.profile, data.experience);
+        renderHero(data.profile, data.projects);
         renderAbout(data.summary, data.profile);
         renderSkills(data.skills);
         renderCertifications(data.certifications);
@@ -81,7 +81,7 @@ async function fetchData() {
     }
 }
 
-function renderHero(profile, experience) {
+function renderHero(profile, projects) {
     document.getElementById('hero-name').textContent = profile.name;
     document.getElementById('hero-role').textContent = profile.role;
 
@@ -92,7 +92,7 @@ function renderHero(profile, experience) {
 
     const statsConfig = [
         { label: 'Years Exp', value: `${expYears}+` },
-        { label: 'Projects', value: '5+' }, // Estimating based on detailed resume bullets
+        { label: 'Projects', value: `${projects.length}+` },
         { label: 'Tech Stack', value: '15+' }
     ];
 
@@ -126,7 +126,7 @@ function renderHero(profile, experience) {
 function renderAbout(summary, profile) {
     document.getElementById('about-content').innerHTML = `
         <p>${summary}</p>
-        <p style="margin-top: 1rem">Currently based in <strong>${profile.location}</strong>.</p>
+        <p style="margin-top: 1rem">Currently based in <strong>${profile.location}</strong>${profile.location_note ? ` (${profile.location_note})` : ''}.</p>
     `;
 
     // Render "JSON" view in the terminal window
@@ -203,13 +203,13 @@ function renderExperience(experience) {
                 <div class="job-header">
                     <div>
                         <span class="role">${job.role}</span>
-                        <span class="company">@ ${job.company}</span>
+                        <span class="company">@ ${job.company}${job.client ? ` (Client: ${job.client})` : ''}</span>
                     </div>
                     <div>
                         <span class="date">${job.period}</span>
                     </div>
                 </div>
-                <span class="location"><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
+                ${job.location ? `<span class="location"><i class="fas fa-map-marker-alt"></i> ${job.location}</span>` : ''}
                 <ul class="job-details" style="margin-top: 1rem">
                     ${bullets}
                 </ul>

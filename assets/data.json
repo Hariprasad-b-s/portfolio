@@ -8,100 +8,74 @@
       "email": "hariprasad.sankaran@gmail.com",
       "linkedin": "https://www.linkedin.com/in/hariprasadbs",
       "github": "https://github.com/Hariprasad-b-s"
-    }
+    },
+    "location_note": "Open to Relocation"
   },
-  "summary": "Databricks Certified Data Engineer Professional with 5+ years owning the full lifecycle of enterprise data platforms end to end doing architecture, ingestion, streaming, layered ELT modeling, governance, IaC, CI/CD, and cost optimization across Databricks, Snowflake, Azure, and AWS. Track record of processing multi-terabyte daily telemetry, unifying ingestion from 50+ sources, cutting processing latency 30%+, and shipping reusable frameworks adopted organization-wide that shrink new-feed delivery from weeks to days. Deep PySpark, Structured Streaming, and Kafka expertise complemented by dbt and Apache Airflow for warehouse-native ELT, with domain depth in cybersecurity (SIEM, Splunk, CrowdStrike, Cribl), healthcare (FHIR/HIPAA), and GenAI/LLM data systems, and reporting delivered through Power BI (Microsoft Power Platform).",
+  "summary": "Databricks Certified Data Engineer Professional with 5+ years building data lakehouse and cloud data warehouse pipelines using SQL, Python, Apache Spark, Snowflake, dbt, and Airflow on AWS and Azure, including 2 years at Comcast delivering multi-terabyte daily pipelines with built-in data quality, observability, and lineage.",
   "skills": {
     "Data Engineering": [
-      "Python",
       "SQL",
+      "Python",
       "PySpark",
       "Apache Spark",
       "Spark SQL",
-      "Structured Streaming",
-      "ETL/ELT",
-      "Data Modeling (Dimensional / Star & Snowflake Schema, Kimball)",
-      "Data Warehousing",
-      "Data Lake / Lakehouse",
-      "Medallion Architecture",
-      "Data Quality & Governance"
-    ],
-    "Warehousing & ELT": [
-      "Snowflake (virtual warehouses, micro-partition pruning, clustering keys, Time Travel, Streams & Tasks, RBAC)",
-      "dbt (staging → intermediate → marts layering, tests, docs)",
-      "Apache Airflow (DAGs, dependencies, retries, SLAs)"
-    ],
-    "Databricks Platform": [
+      "Databricks",
       "Delta Lake",
-      "Delta Live Tables",
       "Unity Catalog",
-      "Databricks Lakeflow Jobs",
-      "Autoloader",
-      "ZORDER",
-      "OPTIMIZE",
-      "Vacuum"
+      "Snowflake",
+      "dbt",
+      "Apache Airflow",
+      "Data Lakehouse Architecture",
+      "Data Warehousing",
+      "Dimensional Modeling (Kimball)",
+      "Data Quality",
+      "Data Observability",
+      "Data Lineage"
+    ],
+    "Cloud & DevOps": [
+      "AWS (S3, Lambda, Glue, SQS, Redshift, IAM)",
+      "Azure (Data Factory, ADLS Gen2, Synapse)",
+      "GCP (BigQuery)",
+      "Terraform",
+      "Docker",
+      "CI/CD (GitHub Actions, Azure DevOps)",
+      "Git"
     ],
     "Streaming & Ingestion": [
       "Apache Kafka",
       "Structured Streaming",
+      "Auto Loader",
       "Snowpipe",
       "Snowflake Streams & Tasks",
       "Cribl",
-      "REST API Ingestion (retry logic, pagination)",
-      "Autoloader",
-      "AWS SQS"
-    ],
-    "Cloud & DevOps": [
-      "Azure (Data Factory, ADLS Gen2, Azure SQL/SQL Server, Synapse, Logic Apps, Key Vault, Entra ID)",
-      "AWS (S3, Lambda, Glue, SQS, Redshift, Step Functions, Secrets Manager, KMS, IAM)",
-      "Terraform (IaC)",
-      "CI/CD (Azure DevOps, GitHub Actions)",
-      "Git/GitHub"
-    ],
-    "Security & Compliance": [
-      "SIEM (Splunk)",
-      "CrowdStrike EDR telemetry",
-      "Cribl log routing",
-      "SOC enablement",
-      "Threat & Vulnerability Assessment",
-      "RBAC / least-privilege",
-      "Column-level security",
-      "Dynamic data masking",
-      "PHI/HIPAA handling"
-    ],
-    "Data Formats & Stores": [
-      "Delta Lake",
-      "Parquet",
-      "JSON",
-      "CSV",
-      "PostgreSQL",
-      "DuckDB",
-      "ChromaDB"
-    ],
-    "GenAI & LLMs": [
-      "RAG pipelines",
-      "LangChain",
-      "Ollama",
-      "Vector embeddings (nomic-embed-text)",
-      "Prompt engineering",
-      "AI-assisted development (Claude Code, GitHub Copilot, Cursor, Gemini)"
+      "REST APIs"
     ],
     "Business Intelligence": [
-      "Power BI (Microsoft Power Platform)",
+      "Looker",
+      "Power BI",
       "Tableau",
-      "Databricks Dashboards",
-      "Operational Analytics",
-      "Data Visualization"
+      "Database Views",
+      "Data Extracts",
+      "Databricks Dashboards"
     ],
-    "Programming & Practices": [
+    "Programming": [
       "Python",
-      "SQL",
       "C++",
-      "Java",
-      "Unix/Bash",
-      "SDLC coding standards",
-      "Multiprocessing/Threading",
-      "Data Structures & Algorithms"
+      "Java"
+    ],
+    "Familiar With": [
+      "Teradata",
+      "Kubernetes",
+      "MLflow"
+    ],
+    "Tools": [
+      "VS Code",
+      "Cursor",
+      "Claude Code",
+      "Gemini Antigravity",
+      "GitHub Copilot",
+      "Genie AI",
+      "Unix/Bash"
     ]
   },
   "certifications": [
@@ -109,6 +83,11 @@
       "name": "Databricks Certified Data Engineer Professional",
       "date": "Dec 2025",
       "url": "https://credentials.databricks.com/81c218d6-0724-43fb-991f-4eaf30e51a43#acc.budxjSZs"
+    },
+    {
+      "name": "Databricks GenAI Fundamentals Accreditation",
+      "date": "Aug 2026",
+      "url": "https://credentials.databricks.com/8f5859f6-6f29-410e-875e-cee73c87e1c4#acc.6cmlKEbq"
     },
     {
       "name": "Azure Data Fundamentals (DP-900)",
@@ -123,16 +102,16 @@
   ],
   "experience": [
     {
-      "role": "Student Associate - Data Analyst",
-      "company": "University of Cincinnati",
-      "department": "Bearcat Package Center",
-      "location": "Cincinnati, Ohio",
-      "period": "Jan 2026 – Present",
+      "role": "Data Engineer Intern",
+      "company": "CCC Intelligent Solutions",
+      "period": "Sep 2026 – Present",
       "highlights": [
-        "Provided supervisor with one reliable source of truth by building and maintaining ETL pipelines to a single reporting database.",
-        "Delivered Power BI (Microsoft Power Platform) dashboards that turn raw package center metrics into at-a-glance operational views for day-to-day team decisions.",
-        "Reduced report generation time by optimizing SQL queries and data models, giving stakeholders faster access to the metrics they act on.",
-        "Reduced manual data-verification effort with automated Python validation scripts that catch integrity and consistency issues."
+        "Migrated a legacy claims data pipeline built on SQL Server stored procedures and SSIS packages to Databricks, rewriting T-SQL logic in PySpark and Spark SQL and cutting end-to-end processing time 50%.",
+        "Validated the migration with automated row-count, checksum, and column-level reconciliation between legacy and Databricks outputs, achieving 100% data parity across 3M+ daily claim records before cutover.",
+        "Converted full nightly reloads into incremental Delta Lake MERGE and Auto Loader patterns, reducing compute cost per run 35% while keeping claims data fresh for reporting and analytics.",
+        "Engineered a PySpark ingestion framework that flattens nested JSON and XML estimate files and unpacks zipped claim archives, standardizing 12+ semi-structured feeds into curated Delta tables.",
+        "Prepared model-ready multimodal datasets linking 500K+ claim photos, estimate PDFs, and repair notes to claim metadata, cutting data preparation time 60% for the computer vision team.",
+        "Governed 80+ migrated tables in Unity Catalog with data lineage, PII masking, and role-based access, orchestrating them through Databricks Lakeflow Jobs with data quality checks and failure alerts."
       ]
     },
     {
@@ -141,18 +120,14 @@
       "location": "Chennai, India",
       "period": "Aug 2023 – Aug 2025",
       "highlights": [
-        "Architected and maintained large-scale Databricks pipelines processing multi-terabyte daily cybersecurity telemetry from firewalls, endpoints, and threat-detection systems, enabling advanced anomaly detection and security-event correlation across global networks.",
-        "Reduced data processing latency 30%+ by orchestrating Databricks Workflows and Delta Live Tables with Terraform-provisioned, auto-scaling compute landing in Unity Catalog managed Delta tables.",
-        "Unified logs from 50+ security tools into a single Snowflake analytics layer, automating ingestion with Cribl, Airflow, and AWS Lambda (JSON → S3 → Snowpipe) and ending fragmented, tool-by-tool data access for analysts.",
-        "Sped threat investigations for downstream analysts by engineering a layered staging → intermediate → marts model in dbt on Snowflake, delivering clean, tested, analytics-ready security data.",
-        "Designed a log-routing architecture with Cribl ingesting high-volume telemetry from Splunk, plus custom REST API integrations pulling endpoint telemetry directly from CrowdStrike.",
-        "Reduced SIEM noise and accelerated detection for SOC analysts by building automated AWS SQS routing that pushes enriched, high-fidelity threat data back into Splunk.",
-        "Enabled threat-hunting teams to spot suspicious activity within minutes through Structured Streaming pipelines for cybersecurity logs.",
-        "Hardened business-critical security feeds with dbt tests (not null, unique, relationships) and source-freshness checks across every warehouse layer.",
-        "Ensured data integrity across 10+ ETL pipelines running up to 5 concurrent executions with zero dependency failures by automating orchestration with Databricks Lakeflow Jobs and Delta Live Tables.",
-        "Cut warehouse storage costs $5,000/year and compute costs 20% through Snowflake warehouse right-sizing, auto-suspend/resume, clustering keys, and result-cache reuse.",
-        "Achieved consistent, reproducible releases with zero manual intervention by implementing Terraform modules for Databricks CI/CD — deploying jobs, clusters, and permissions across dev, staging, and production.",
-        "Accelerated ETL development cycles 30% by integrating AI-assisted tools (GitHub Copilot, Gemini, Claude Code) into notebook development, validation, and documentation."
+        "Architected a Databricks and AWS data lakehouse processing 10+ TB of daily cybersecurity telemetry from firewalls, endpoints, and threat-detection systems, standardizing raw logs into Unity Catalog governed Delta tables using medallion design patterns.",
+        "Unified logs from 50+ security tools into a Snowflake cloud data warehouse, building ingestion frameworks with Cribl, Apache Airflow, and AWS Lambda (JSON → S3 → Snowpipe) and dbt staging, intermediate, and marts layers that cut analyst query time 45%.",
+        "Reduced data processing latency 30%+ by orchestrating Airflow DAGs and Databricks Lakeflow Jobs across 10+ interdependent pipelines running up to 5 concurrent executions with zero dependency failures.",
+        "Established data observability across every layer with dbt tests, source-freshness checks, and a SparkQueryListener and Kafka monitor tracking streaming job health, reducing data quality incidents 40% and reporting SLA status to stakeholders.",
+        "Cut nightly table maintenance runtime 65% by migrating 40+ Delta tables from partitioning and Z-ORDER to liquid clustering, enabling predictive optimization, and turning on deletion vectors for CDC MERGE targets to eliminate full file rewrites.",
+        "Lowered Snowflake compute costs 20% and storage costs $5,000/year through warehouse right-sizing, auto-suspend, clustering keys, and result-cache reuse, using query history to isolate the 5% of queries driving most spend.",
+        "Delivered data consumption layers of secure database views, REST APIs, and scheduled data extracts for SOC analysts, applying RBAC and dynamic masking by data sensitivity, and routed enriched threat data back into Splunk via AWS SQS, reducing SIEM noise 35%.",
+        "Automated releases with Terraform modules and GitHub Actions CI/CD provisioning Databricks jobs, clusters, Snowflake roles, and permissions across dev, staging, and production with zero manual intervention."
       ]
     },
     {
@@ -162,14 +137,13 @@
       "location": "Chennai, India",
       "period": "Jun 2021 – Aug 2023",
       "highlights": [
-        "Reduced new data-source integration time 50% organization-wide by building a reusable Python REST API ingestion notebook (retry logic, pagination) that other teams adopted for external data onboarding.",
-        "Improved data consistency and refresh accuracy 40%+ by engineering large-scale ETL in Azure Databricks and ADF that ingests and aggregates multi-source data into ADLS Gen2.",
-        "Cut daily batch runtime by 30+ minutes and improved performance 15% by re-platforming legacy T-SQL stored procedures into modular, tested layered SQL (dbt-pattern staging → marts) and PySpark frameworks.",
-        "Accelerated transformations across billions of records by tuning PySpark partitioning, caching, and shuffle strategies for high-performance distributed jobs.",
-        "Cut new data-source onboarding effort 40% by building reusable pipeline templates and modular, parameterized PySpark notebooks the whole team adopted, delivering new analytics feeds in days instead of weeks.",
-        "Increased pipeline scalability and maintainability with a metadata-driven ADF ingestion framework automating source-to-target mapping, schema validation, and dynamic orchestration.",
-        "Enabled self-service analytics and executive dashboards by designing dimensional (fact/dimension) star and snowflake schema marts consumed in Power BI for reliable, decision-ready reporting.",
-        "Hardened business-critical feeds with data quality and validation checks (including schema-drift detection) across all ingestion layers."
+        "Engineered large-scale ETL pipelines in Azure Databricks and Azure Data Factory ingesting multi-source data into an ADLS Gen2 data lake, improving data consistency and refresh accuracy 40%+.",
+        "Built a metadata-driven ingestion framework and reusable Python REST API connector (retry logic, pagination) adopted organization-wide, cutting new data source integration time 50% and onboarding effort 40%.",
+        "Re-platformed legacy T-SQL stored procedures into modular PySpark and layered SQL models, reducing daily batch runtime by 30+ minutes and improving performance 15%.",
+        "Resolved severe data skew in billion-row joins by diagnosing straggler tasks in the Spark UI (max duration 10x the median), salting hot keys, and handling null join keys explicitly, reducing affected stage runtime 40%.",
+        "Eliminated disk spill by tuning shuffle partitions per workload to 100-200 MB each and co-partitioning data on join keys to remove redundant shuffles, cutting job runtime 30%.",
+        "Replaced Python UDFs with native Spark SQL functions and Arrow-backed Pandas UDFs, and moved filters ahead of UDF execution, improving affected stage runtimes 60-70%.",
+        "Designed star and snowflake schema marts in Azure Synapse with documented transformation rules, data lineage, and schema-drift checks, enabling self-service Power BI reporting and faster change management for cross-functional teams."
       ]
     },
     {
@@ -178,13 +152,32 @@
       "location": "Chennai, India",
       "period": "Jan 2020 – Dec 2020",
       "highlights": [
-        "Improved report accuracy and cut data-request turnaround by authoring and optimizing complex SQL for BI reports used by product teams.",
-        "Reduced manual effort in recurring workflows with Python scripts for data cleaning, preprocessing, and file automation.",
-        "Supported automation of key business metrics and dashboards by building and maintaining SQL-driven pipelines for internal reporting."
+        "Authored and optimized complex SQL for BI reports used by product teams, improving report accuracy and cutting data-request turnaround 35%.",
+        "Automated recurring data cleaning and preprocessing workflows with Python scripts, saving 10+ hours of manual effort per week."
       ]
     }
   ],
   "projects": [
+    {
+      "title": "Clickstream and Transaction Analytics Platform (Snowflake, dbt, Airflow, Looker)",
+      "status": "Completed",
+      "url": "",
+      "highlights": [
+        "Architected an ELT platform loading 5M+ daily clickstream JSON events and transactional records into Snowflake via Snowpipe, orchestrated by metadata-driven Airflow DAGs with SLA alerts to Slack.",
+        "Modeled staging, intermediate, and marts layers in dbt with tests, docs, and lineage graphs to build a 360-degree customer view, and exposed curated marts through secure views and an embedded Looker dashboard.",
+        "Automated CI/CD with GitHub Actions and dbt Cloud, running validation and dry-runs on every pull request to block breaking changes before deployment."
+      ]
+    },
+    {
+      "title": "Local RAG Pipeline: Healthcare Data Q&A (LangChain, Ollama, ChromaDB)",
+      "status": "In Progress",
+      "url": "",
+      "highlights": [
+        "Built an offline RAG pipeline with LangChain and Gemma 4 (12B) via Ollama, enabling privacy-preserving natural-language Q&A over structured healthcare data with zero external API dependencies.",
+        "Transformed PySpark-produced Parquet records into semantically rich text summaries and embedded them with nomic-embed-text into a persistent ChromaDB vector store supporting batch ingestion of multi-part datasets.",
+        "Grounded model responses in retrieved patient records through a conversational retrieval interface, reducing hallucinations and anchoring every answer to source data."
+      ]
+    },
     {
       "title": "Hybrid Healthcare Data Engineering Pipeline (FHIR → Medallion → RBAC)",
       "status": "In Progress",
@@ -205,17 +198,6 @@
         "Automated infrastructure and scheduling with Terraform, Azure DevOps, and Apache Airflow for version-controlled, SLA-compliant, fully auditable production runs.",
         "Developed PySpark transformations to clean, enrich, and structure raw JSON security events into Parquet/Delta datasets, with schema validation and data-quality checks that flag failed loads pre-consumption.",
         "Delivered Power BI (Microsoft Power Platform) and Synapse dashboards surfacing real-time threat anomalies, top attack sources, and detection metrics for cybersecurity teams."
-      ]
-    },
-    {
-      "title": "Local RAG Pipeline: Healthcare Patient Data Q&A with LangChain and Ollama",
-      "status": "In Progress",
-      "url": "",
-      "highlights": [
-        "Built an end-to-end RAG pipeline using LangChain and locally hosted Gemma 4 (12B) via Ollama, enabling fully offline, privacy-preserving Q&A over structured healthcare data without external API dependencies.",
-        "Engineered a structured-to-text transformation layer converting Parquet records (output of a PySpark ETL pipeline) into semantically rich text summaries, making structured patient data searchable via natural language.",
-        "Built a vector ingestion pipeline using nomic-embed-text embeddings and ChromaDB as the local vector store, supporting batch ingestion of multi-part Parquet datasets with persistent storage.",
-        "Implemented an interactive conversational interface that retrieves semantically relevant patient records from ChromaDB and passes them as grounded context to Gemma 4, reducing hallucinations and anchoring responses to real data."
       ]
     },
     {
@@ -271,7 +253,7 @@
     {
       "institution": "Anna University",
       "period": "July 2016 – Nov 2020",
-      "degree": "Bachelor of Engineering in Electronics and Communications Engineering",
+      "degree": "Bachelor of Engineering in Electronics and Communication Engineering",
       "location": "TamilNadu, India",
       "coursework": [
         "Programming in C",
